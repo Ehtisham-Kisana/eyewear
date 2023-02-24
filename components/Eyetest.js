@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity,StyleSheet, FlatList } from "react-native";
-import { useState } from "react";
+
 
 const COLORS = {
     dark: '#041C32',
@@ -12,12 +12,6 @@ const COLORS = {
  
 
 const Eyetest=({navigation})=>{
-const [methods, setMethods] = useState([
-    {name:'Amsler Grid', key:'1'},
-    {name:'Snellers', key:'2'},
-    {name:'Color Plate Test', key:'3'},
-    {name:'Color Cube Test', key:'4'},
-]);
 
     return(
         <View style={styles.container}>
@@ -25,15 +19,22 @@ const [methods, setMethods] = useState([
              <Text style={styles.text}>Testing Methods</Text>
          </View>
          <View style={styles.lowerbox}>
-          <FlatList 
-          data={methods}
-          renderItem={({item})=>(
             <TouchableOpacity style={styles.box}>
-            <Text style={styles.textBox}> {item.name} </Text>
+            <Text style={styles.textBox}> Amsler Grid </Text>
             </TouchableOpacity>
-          )}
-          />  
-                       
+
+            <TouchableOpacity style={styles.box}>
+            <Text style={styles.textBox}> Snellers </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.box}>
+            <Text style={styles.textBox}> Color Plate Test </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.box}>
+            <Text style={styles.textBox}> Color Cube Test </Text>
+            </TouchableOpacity>
+             
          </View>          
           {/* <Text>This is Eyetest page</Text>
           <Button title="Go to Doctors page" onPress={()=>{navigation.navigate('Doctors')}} />
