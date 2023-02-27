@@ -19,7 +19,7 @@ const Eyetest=({navigation})=>{
              <Text style={styles.text}>Testing Methods</Text>
          </View>
          <View style={styles.lowerbox}>
-            <TouchableOpacity style={styles.box}  onPress={()=>{navigation.navigate('Amsler')}}>
+            <TouchableOpacity style={styles.box}  onPress={()=>{navigation.navigate('AmslerInstructions')}}>
             <Text style={styles.textBox}> Amsler Grid </Text>
             </TouchableOpacity>
 
