@@ -9,7 +9,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Hoom from './Hoom';
 import AR from './homecomponents/AR';
-import Amsler from './Eyecomponents/Methods/Amsler';
+import Amsler from './Eyecomponents/AmslerMethod/Amsler';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,7 +29,8 @@ const Stackk =()=> {
     <Stack.Screen name='Doctors' component={Doctors}   />
     <Stack.Screen name='Hoom' component={Hoom}   />
     <Stack.Screen name='AR' component={AR}   />
-    <Stack.Screen name='Amsler' component={Amsler}   />
+    <Stack.Screen name='Amsler' component={Amsler} />
+    
   </Stack.Navigator> 
 </NavigationContainer>
   );
