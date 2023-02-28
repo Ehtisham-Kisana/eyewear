@@ -11,6 +11,8 @@ import Hoom from './Hoom';
 import AR from './homecomponents/AR';
 import Amsler from './Eyecomponents/AmslerMethod/Amsler';
 import AmslerInstructions from './Eyecomponents/AmslerMethod/AmslerInstructions';
+import Snellers from './Eyecomponents/SnellersMethod/Snellers';
+import SnellersInstruction from './Eyecomponents/SnellersMethod/SnellersInstruction';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,7 +34,9 @@ const Stackk =()=> {
     <Stack.Screen name='AR' component={AR}   />
     <Stack.Screen name='Amsler' component={Amsler} />
     <Stack.Screen name='AmslerInstructions' component={AmslerInstructions} />
-    
+    <Stack.Screen name='Snellers' component={Snellers} />
+    <Stack.Screen name='SnellersInstruction' component={SnellersInstruction} />
+
   </Stack.Navigator> 
 </NavigationContainer>
   );
