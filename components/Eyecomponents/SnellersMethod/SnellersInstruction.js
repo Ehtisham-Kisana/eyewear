@@ -3,12 +3,18 @@ import React from 'react'
 
 const SnellersInstruction = ({navigation}) => {
   return (
-    <View>
-      <Text>SnellersInstruction</Text>
+    <View style={styles.container}>
+      <Text> Here is the SnellersInstruction</Text>
     </View>
   )
 }
 
 export default SnellersInstruction;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container:{
+        flex:1,
+        justifyContent:'center',
+        alignItems:'center',
+    },
+})

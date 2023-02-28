@@ -23,7 +23,7 @@ const Eyetest=({navigation})=>{
             <Text style={styles.textBox}> Amsler Grid </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.box} onPress={()=>{navigation.navigate('SnellersInstructions')}}>
+            <TouchableOpacity style={styles.box} onPress={()=>{navigation.navigate('SnellersInstruction')}}>
             <Text style={styles.textBox}> Snellers </Text>
             </TouchableOpacity>
 
