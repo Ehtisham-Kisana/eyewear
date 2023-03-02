@@ -19,6 +19,7 @@ const COLORS = {
 const Snellers = (navigation) => {
   const [size, setSize] = useState(75);
   const [index, setIndex] = useState(0);
+  const [score, setScore] = useState(0.0);
   const [alpha, setAlpha] = useState([
     "E",
     "F  P",
@@ -29,34 +30,57 @@ const Snellers = (navigation) => {
     "D     E     F     P     O     T     E     C",
   ]);
 
+  const showScore = () => {
+    switch (index) {
+      case 0:
+        return setScore(0.25);
+      case 1:
+        return setScore(0.32);
+
+      case 2:
+        return setScore(0.4);
+
+      case 3:
+        return setScore(0.5);
+
+      case 4:
+        return setScore(0.63);
+
+      case 5:
+        return setScore(0.8);
+
+      case 6:
+        return setScore(1.0);
+
+      default:
+        return setSize(0.00);
+    }
+  };
+
   const sizeHandler = () => {
     switch (index) {
       case 0:
         return setSize(65);
-      
+
       case 1:
         return setSize(55);
-       
+
       case 2:
         return setSize(45);
-    
+
       case 3:
         return setSize(35);
-        
+
       case 4:
         return setSize(25);
-       
+
       case 5:
         return setSize(15);
-     
-      
-    
+
       default:
         return setSize(75);
-          
     }
   };
-
 
   const Nextslide = () => {
     if (index === 6) {
@@ -75,7 +99,7 @@ const Snellers = (navigation) => {
         </View>
         <View style={styles.container2}>
           <TouchableOpacity style={[styles.btn, { backgroundColor: "red" }]}>
-            <Text style={styles.text2}>STOP</Text>
+            <Text style={styles.text2} onPress={()=>{showScore()}}>STOP</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.btn, { backgroundColor: "green" }]}
@@ -85,7 +109,17 @@ const Snellers = (navigation) => {
           >
             <Text style={styles.text2}>NEXT</Text>
           </TouchableOpacity>
+       
         </View>
+         <View  style={styles.container3}>
+            <Text style={styles.text3}>Score:</Text>
+            <View style={styles.result}>
+            <Text style={styles.text4}>{score}</Text>
+          </View>
+          <TouchableOpacity style={styles.btn}>
+            <Text style={styles.text5} onPress={()=>{setScore(0.00)}}>reset</Text>
+          </TouchableOpacity>
+          </View>
       </SafeAreaView>
     </View>
   );
@@ -126,5 +160,37 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "bold",
     fontSize: 20,
+  },
+  container3: {
+    flexDirection: 'column',
+    justifyContent: "center",
+    alignItems: "center",
+    margin: 20,
+  
+  },
+  text3:{
+    color: COLORS.light,
+    fontWeight: "bold",
+    fontSize: 30,
+  },
+  result:{
+    backgroundColor:COLORS.dark,
+    height:50,
+    width:80,
+    justifyContent: "center",
+    alignItems: "center",
+    margin: 5,
+    borderRadius:9,
+  },
+  text4:{
+    color: 'white',
+    fontWeight: "bold",
+    fontSize: 25,
+  },
+  text5:{
+    color: 'white',
+    fontSize: 20,
+    fontStyle: 'italic',
+    textDecorationLine: 'underline'
   },
 });
