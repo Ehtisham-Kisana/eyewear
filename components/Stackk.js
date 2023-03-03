@@ -13,6 +13,8 @@ import Amsler from './Eyecomponents/AmslerMethod/Amsler';
 import AmslerInstructions from './Eyecomponents/AmslerMethod/AmslerInstructions';
 import Snellers from './Eyecomponents/SnellersMethod/Snellers';
 import SnellersInstruction from './Eyecomponents/SnellersMethod/SnellersInstruction';
+import ColorPlate from './Eyecomponents/ColorPlateMethod/ColorPlate';
+import ColorPlateInstruction from './Eyecomponents/ColorPlateMethod/ColorPlateInstruction';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +38,8 @@ const Stackk =()=> {
     <Stack.Screen name='AmslerInstructions' component={AmslerInstructions} />
     <Stack.Screen name='Snellers' component={Snellers} />
     <Stack.Screen name='SnellersInstruction' component={SnellersInstruction} />
+    <Stack.Screen name='ColorPlate' component={ColorPlate} />
+    <Stack.Screen name='ColorPlateInstruction' component={ColorPlateInstruction} />
 
   </Stack.Navigator> 
 </NavigationContainer>

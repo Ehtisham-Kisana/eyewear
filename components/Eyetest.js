@@ -28,7 +28,7 @@ const Eyetest=({navigation})=>{
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.box}>
-            <Text style={styles.textBox}> Color Plate Test </Text>
+            <Text style={styles.textBox} onPress={()=>{navigation.navigate('ColorPlateInstruction')}}> Color Plate Test </Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.box}>
