@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import React from "react";
 import { useState } from "react";
-import { Colors } from "react-native/Libraries/NewAppScreen";
+
 
 const COLORS = {
   dark: "#041C32",

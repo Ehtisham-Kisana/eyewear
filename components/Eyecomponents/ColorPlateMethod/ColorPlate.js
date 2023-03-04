@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
+const COLORS = {
+  dark: "#041C32",
+  primary: "#04293A",
+  secondary: "#064663",
+  light: "#ECB365",
+};
+
 const ColorPlate = () => {
   const [currentColor, setCurrentColor] = useState('white');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,62 +44,13 @@ const ColorPlate = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>What color is this?</Text>
-      <View style={[styles.box, { backgroundColor: currentColor }]} />
-      <TouchableOpacity
-        style={styles.button}
-        onPress={handleCheckAnswer}
-      >
-        <Text style={styles.buttonText}>Check Answer</Text>
-      </TouchableOpacity>
-      {!isCorrect && (
-        <Text style={styles.incorrectText}>Incorrect!</Text>
-      )}
-      <Text style={styles.scoreText}>Score: {score}</Text>
+
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  },
-  box: {
-    width: 80,
-    height: 80,
-    borderRadius: 8,
-    marginBottom: 20,
-  },
-  button: {
-    backgroundColor: '#0D7AFF',
-    paddingVertical: 8,
-    paddingHorizontal: 20,
-    borderRadius: 4,
-  },
-  buttonText: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#FFFFFF',
-  },
-  incorrectText: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#FF0000',
-    marginTop: 10,
-  },
-  scoreText: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#000000',
-    marginTop: 10,
-  },
+
 });
 
 export default ColorPlate;
