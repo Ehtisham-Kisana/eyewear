@@ -53,7 +53,7 @@ const Snellers = (navigation) => {
         return setScore(1.0);
 
       default:
-        return setSize(0.00);
+        return setSize(0.0);
     }
   };
 
@@ -99,7 +99,14 @@ const Snellers = (navigation) => {
         </View>
         <View style={styles.container2}>
           <TouchableOpacity style={[styles.btn, { backgroundColor: "red" }]}>
-            <Text style={styles.text2} onPress={()=>{showScore()}}>STOP</Text>
+            <Text
+              style={styles.text2}
+              onPress={() => {
+                showScore();
+              }}
+            >
+              STOP
+            </Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.btn, { backgroundColor: "green" }]}
@@ -109,17 +116,23 @@ const Snellers = (navigation) => {
           >
             <Text style={styles.text2}>NEXT</Text>
           </TouchableOpacity>
-       
         </View>
-         <View  style={styles.container3}>
-            <Text style={styles.text3}>Score:</Text>
-            <View style={styles.result}>
+        <View style={styles.container3}>
+          <Text style={styles.text3}>Score:</Text>
+          <View style={styles.result}>
             <Text style={styles.text4}>{score}</Text>
           </View>
           <TouchableOpacity style={styles.btn}>
-            <Text style={styles.text5} onPress={()=>{setScore(0.00)}}>reset</Text>
+            <Text
+              style={styles.text5}
+              onPress={() => {
+                setScore(0.0);
+              }}
+            >
+              reset
+            </Text>
           </TouchableOpacity>
-          </View>
+        </View>
       </SafeAreaView>
     </View>
   );
@@ -162,35 +175,34 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   container3: {
-    flexDirection: 'column',
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     margin: 20,
-  
   },
-  text3:{
+  text3: {
     color: COLORS.light,
     fontWeight: "bold",
     fontSize: 30,
   },
-  result:{
-    backgroundColor:COLORS.dark,
-    height:50,
-    width:80,
+  result: {
+    backgroundColor: COLORS.dark,
+    height: 50,
+    width: 80,
     justifyContent: "center",
     alignItems: "center",
     margin: 5,
-    borderRadius:9,
+    borderRadius: 9,
   },
-  text4:{
-    color: 'white',
+  text4: {
+    color: "white",
     fontWeight: "bold",
     fontSize: 25,
   },
-  text5:{
-    color: 'white',
+  text5: {
+    color: "white",
     fontSize: 20,
-    fontStyle: 'italic',
-    textDecorationLine: 'underline'
+    fontStyle: "italic",
+    textDecorationLine: "underline",
   },
 });
