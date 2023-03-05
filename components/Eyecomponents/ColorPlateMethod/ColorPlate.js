@@ -12,14 +12,21 @@ const COLORS = {
 // Color Plate Test Images from the internet
 const images = [
   {uri: require('../../../assets/ColorPlates/one.png'), msg:'Hello' },
-  
+  {uri: require('../../../assets/ColorPlates/two.png'), msg:'Hello' },
+  {uri: require('../../../assets/ColorPlates/three.png'), msg:'Hello' },
+  {uri: require('../../../assets/ColorPlates/four.png'), msg:'Hello' },
+  {uri: require('../../../assets/ColorPlates/five.png'), msg:'Hello' },
+  {uri: require('../../../assets/ColorPlates/six.png'), msg:'Hello' },
+  {uri: require('../../../assets/ColorPlates/seven.png'), msg:'Hello' },
+  {uri: require('../../../assets/ColorPlates/eight.png'), msg:'Hello' },
+  {uri: require('../../../assets/ColorPlates/nine.png'), msg:'Hello' },
+  {uri: require('../../../assets/ColorPlates/ten.png'), msg:'Hello' },
+  {uri: require('../../../assets/ColorPlates/eleven.png'), msg:'Hello' },  
 ];
 
 
 const ColorPlate = () => {
-  const [currentImage, setCurrentImage] = useState(
-    ['../../../assets/ColorPlates/one.png']
-  );
+  const [currentImage, setCurrentImage] = useState(0);
 
   const handleImagePress = () => {
     if (currentImage === images.length - 1) {
@@ -33,7 +40,7 @@ const ColorPlate = () => {
     <View style={styles.container}>
       <TouchableOpacity onPress={handleImagePress}>
 
-        <Image source={images[0].uri} style={styles.image} />
+        <Image source={images[currentImage].uri} style={styles.image} />
         <Text>{images[0].msg}</Text>
       </TouchableOpacity>
       <Text style={styles.infoText}>
