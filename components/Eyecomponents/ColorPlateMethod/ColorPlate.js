@@ -15,7 +15,6 @@ const COLORS = {
   light: "#ECB365",
 };
 
-// Color Plate Test Images from the internet
 const images = [
   {uri: require('../../../assets/ColorPlates/one.png'),correct:'12', msg:'All people should see a number 12, including those with total color blindness. If someone said they cant see something, or saw something else they are fibbing' },
   {uri: require('../../../assets/ColorPlates/two.png'),correct:'12', msg:'Those with normal color vision see an 8. Those with red-green deficiencies see a 3. Those with total color blindness and weakness are not able to read any numeral.' },
