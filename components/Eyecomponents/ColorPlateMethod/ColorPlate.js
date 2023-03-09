@@ -8,7 +8,7 @@ const COLORS = {
   light: "#ECB365",
 };
 
-//images scene
+
 const images = [
   {
     uri: require("../../../assets/ColorPlates/one.png"),
