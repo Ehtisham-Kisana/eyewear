@@ -55,7 +55,7 @@ const Eyetest = ({ navigation }) => {
           <Text style={styles.textBox}> Color Cube Test </Text>
         </TouchableOpacity>
       </View>
-      {/* <Text>This is Eyetest page</Text>
+      {/* 
           <Button title="Go to Doctors page" onPress={()=>{navigation.navigate('Doctors')}} />
           <Button title="Go to Hoom page" onPress={()=>{navigation.navigate('Hoom')}} /> */}
     </View>
