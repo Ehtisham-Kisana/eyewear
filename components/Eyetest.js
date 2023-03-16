@@ -56,9 +56,6 @@ const Eyetest = ({ navigation }) => {
         </TouchableOpacity>
       </View>
       {/* 
-      
-      
-      
       <Button title="Go to Doctors page" onPress={()=>{navigation.navigate('Doctors')}} />
  */}
     </View>
