@@ -11,24 +11,38 @@ import {
 } from "react-native";
 import { auth, db } from "../../firebase/firebase.config";
 import { signOut } from "firebase/auth";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, setDoc, doc, getDoc, updateDoc } from "firebase/firestore";
 import { async } from "@firebase/util";
 
 const Profile = ({ navigation }) => {
-  const [name, setName] = useState(null);
-  const [address, setAddress] = useState(null);
-  const [phone, setPhone] = useState(null);
+  const [name, setName] = useState();
+  const [address, setAddress] = useState();
+  const [phone, setPhone] = useState();
 
   const saveData = async () => {
-    // Add a new document with a generated id.
-    const docRef = await addDoc(collection(db, "users"), {
+    // Add a new document in collection "cities"
+    await setDoc(doc(db, "users", auth.currentUser.uid), {
       Name: name,
       Address: address,
       Phone: phone,
+    }).then(() => {
+      alert("Submitted successfully");
     });
-    console.log("Document written with ID: ", docRef.id);
   };
-  useEffect(() => {
+  const updateData = async () => {
+ 
+    const docRef = doc(db, "users", auth.currentUser.uid);
+
+    await updateDoc(docRef, {
+      Name: name,
+      Address: address,
+      Phone: phone,
+    }).then(() => {
+      alert("updated successfully");
+    });
+  };
+
+  useEffect(()=>{
     navigation.setOptions({
       headerRight: () => (
         <TouchableOpacity
@@ -60,6 +74,23 @@ const Profile = ({ navigation }) => {
           // An error happened.
         });
     };
+
+  },[]);
+
+  useEffect(() => {
+    
+    const readData = async () => {
+      const docRef = doc(db, "users", auth.currentUser.uid);
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        setName(docSnap.data().Name);
+        setAddress(docSnap.data().Address);
+        setPhone(docSnap.data().Phone);
+      }
+      readData();
+    };
+
   }, []);
 
   return (
@@ -70,20 +101,29 @@ const Profile = ({ navigation }) => {
         style={styles.input}
         placeholder="Full Name"
         onChangeText={(text) => setName(text)}
+        value={name}
       />
       <TextInput
         style={styles.input}
         placeholder="Phone"
         onChangeText={(text) => setPhone(text)}
         keyboardType="numeric"
+        value={phone}
       />
       <TextInput
         style={styles.input}
         placeholder="Address"
         onChangeText={(text) => setAddress(text)}
+        value={address}
       />
 
-      <Button title="Submit" onPress={() => saveData()}></Button>
+      {address === null && (
+        <Button title="Submit" onPress={() => saveData()}></Button>
+      )}
+
+      {address !== null && (
+        <Button title="Update" onPress={() => updateData()}></Button>
+      )}
     </View>
   );
 };
