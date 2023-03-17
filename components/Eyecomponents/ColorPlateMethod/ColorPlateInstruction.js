@@ -14,30 +14,32 @@ const COLORS = {
   light: "#ECB365",
 };
 
-const SnellersInstruction = ({ navigation }) => {
+const ColorPlateInstruction = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.container2}>
         <ScrollView>
           <View style={styles.Upperbox}>
-            <Text style={styles.text}>What is Visual Acuity?</Text>
+            <Text style={styles.text}>What is a Color Plate test?</Text>
             <Text style={styles.paragraph}>
-              Visual acuity is a measure of how well you see or the sharpness
-              and clarity of your vision.
+              The Color Plate test is a test to measure your ability to perceive
+              differences between colours. Color blindness is most often of
+              genetic nature, but may also occur because of eye, nerve, or brain
+              damage, or due to exposure to certain chemicals.
             </Text>
           </View>
 
           <View style={styles.Upperbox}>
             <Text style={styles.text}>Instructions:</Text>
             <Text style={styles.paragraph}>
-              1. Place your phone approx. 30 cm/12 inches from your eyes. {"\n"}
-              {"\n"}2. Cover your left eye with your left hand.
+              1. Place your phone approx. 30 cm/12 inches from your eyes with
+              each circle set at eye level. {"\n"}
+              {"\n"}2. Try to identify the hidden number in 5 seconds, however
+              there is no time limit. Then click the image to see the answer
+              with an analysis
               {"\n"}
-              {"\n"}3. Read the numbers on the screen loud. When you can no
-              longer read more than half the numbers press stop. The smallest
-              numbers you are able to read will be recorded as your acuity.
-              {"\n"}
-              {"\n"}4. Now repeat all steps, covering your right eye.
+              {"\n"}3. By clicking Next continue to the next test and complete
+              all the 15 tests to identify your color blindness severity.
             </Text>
           </View>
 
@@ -47,7 +49,7 @@ const SnellersInstruction = ({ navigation }) => {
             <TouchableOpacity
               style={styles.btn}
               onPress={() => {
-                navigation.navigate("Snellers");
+                navigation.navigate("ColorPlate");
               }}
             >
               <Text style={styles.text}>START</Text>
@@ -59,7 +61,7 @@ const SnellersInstruction = ({ navigation }) => {
   );
 };
 
-export default SnellersInstruction;
+export default ColorPlateInstruction;
 
 const styles = StyleSheet.create({
   container: {
