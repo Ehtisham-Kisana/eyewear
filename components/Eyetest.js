@@ -58,7 +58,7 @@ const Eyetest = ({ navigation }) => {
       {/* 
       <Button title="Go to Doctors page" onPress={()=>{navigation.navigate('Doctors')}} />
  */}
-    </View>
+    </ View>
   );
 };
 
