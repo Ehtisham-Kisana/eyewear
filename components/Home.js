@@ -1,6 +1,11 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import Main from "./Glasses/Main";
+import Search from "./Glasses/Search";
+import Cart from "./Glasses/Cart";
+import Wishlist from "./Glasses/Wishlist";
+import User from "./Glasses/User";
 
 const COLORS = {
   dark: "#041C32",
@@ -10,9 +15,32 @@ const COLORS = {
 };
 
 const Home = () => {
+  const [selectedTab, setSelectedTab] = useState(0);
+  const [bg, setbg] = useState('');
+
+  const colorPicker=()=>{
+    if(selectedTab===0){
+      setbg(COLORS.dark)
+    }
+    else if(selectedTab===2){
+      setbg(COLORS.dark)
+    }
+  }
   return (
     //view1
     <View style={{ flex: 1 }}>
+      {selectedTab == 0 ? (
+        <Main />
+      ) : selectedTab == 1 ? (
+        <Search />
+      ) : selectedTab == 2 ? (
+        <Cart />
+      ) : selectedTab == 3 ? (
+        <Wishlist />
+      ) : (
+        <User />
+      )}
+
       {/* view2 */}
       <View
         style={{
@@ -31,10 +59,14 @@ const Home = () => {
             height: "100%",
             justifyContent: "center",
             alignItems: "center",
+            backgroundColor:selectedTab==0? `#008080`: COLORS.secondary
+          }}
+          onPress={() => {
+            setSelectedTab(0);
           }}
         >
           {/* <Ionicons name='home' size='23'  /> */}
-          <Ionicons name="home-outline" size={32} color={COLORS.light} />
+          <Ionicons name="home-outline" size={32} color='white' />
         </TouchableOpacity>
         <TouchableOpacity
           style={{
@@ -42,9 +74,13 @@ const Home = () => {
             height: "100%",
             justifyContent: "center",
             alignItems: "center",
+            backgroundColor:selectedTab==1? `#008080`: COLORS.secondary
+          }}
+          onPress={() => {
+            setSelectedTab(1);
           }}
         >
-          <Ionicons name="search-outline" size={32} color={COLORS.light} />
+          <Ionicons name="search-outline" size={32} color='white' />
         </TouchableOpacity>
 
         {/* View3 */}
@@ -56,8 +92,20 @@ const Home = () => {
             alignItems: "center",
           }}
         >
-          <TouchableOpacity style={{width:60,height:60, backgroundColor:COLORS.dark, borderRadius:30,justifyContent:'center',alignItems:'center'}}>
-          <Ionicons name="cart-outline" size={37} color={COLORS.light} />
+          <TouchableOpacity
+            style={{
+              width: 60,
+              height: 60,
+              backgroundColor: selectedTab==2? `#696969`: COLORS.dark,
+              borderRadius: 30,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            onPress={() => {
+              setSelectedTab(2);
+            }}
+          >
+            <Ionicons name="cart-outline" size={37} color='white'/>
           </TouchableOpacity>
         </View>
         <TouchableOpacity
@@ -66,9 +114,13 @@ const Home = () => {
             height: "100%",
             justifyContent: "center",
             alignItems: "center",
+            backgroundColor:selectedTab==3? `#008080`: COLORS.secondary
+          }}
+          onPress={() => {
+            setSelectedTab(3);
           }}
         >
-          <Ionicons name="heart-outline" size={32} color={COLORS.light} />
+          <Ionicons name="heart-outline" size={32} color='white' />
         </TouchableOpacity>
         <TouchableOpacity
           style={{
@@ -76,9 +128,13 @@ const Home = () => {
             height: "100%",
             justifyContent: "center",
             alignItems: "center",
+            backgroundColor:selectedTab==4? `#008080`: COLORS.secondary
+          }}
+          onPress={() => {
+            setSelectedTab(4);
           }}
         >
-          <Ionicons name="person-outline" size={32} color={COLORS.light} />
+          <Ionicons name="person-outline" size={32} color='white' />
         </TouchableOpacity>
       </View>
     </View>
