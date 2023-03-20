@@ -14,6 +14,7 @@ const COLORS = {
   light: "#ECB365",
 };
 
+
 const Home = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [bg, setbg] = useState('');
