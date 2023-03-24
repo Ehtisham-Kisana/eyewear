@@ -21,7 +21,7 @@ const Header = () => {
           color: '#000',
           marginLeft: 20,
         }}>
-        GroceryApp
+        Glasses Store
       </Text>
 
       <TouchableOpacity
