@@ -36,7 +36,7 @@ const Main = () => {
     setSlipperList(products.category[4].data);
     setTrouserList(products.category[5].data);
     setCategoryList(categories);
-    console.log(JSON.stringify(products.category[0]));
+    //console.log(JSON.stringify(products.category[0]));
   }, []);
 
   // const items = useSelector(state => state);
@@ -65,18 +65,18 @@ const Main = () => {
                 <TouchableOpacity
                   style={{
                     height: 45,
-                    width:85,
+                    width:90,
                     borderRadius: 20,
                     borderWidth: 2,
                     justifyContent: 'center',
                     alignItems: 'center',
                     marginLeft: 10,
-                    borderColor:COLORS.primary,
+                    borderColor:'white',
                     backgroundColor:COLORS.light,
 
                   }}>
                   <Text
-                    style={{ marginLeft: 10, marginRight: 10, fontWeight:'bold', color:'black'}}>
+                    style={{ marginLeft: 10, marginRight: 10, fontWeight:'bold', color:'white'}}>
                     {item}
                   </Text>
                 </TouchableOpacity>
