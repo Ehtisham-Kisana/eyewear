@@ -1,5 +1,6 @@
 import {View, TouchableOpacity, Text, Image} from 'react-native';
 import React from 'react';
+import { COLORS } from './COLORS';
 
 const ProductItem = ({item, onAddToCart, onAddWishlist}) => {
   return (
@@ -11,7 +12,7 @@ const ProductItem = ({item, onAddToCart, onAddWishlist}) => {
         justifyContent: 'center',
         alignItems: 'center',
         marginLeft: 10,
-        backgroundColor: '#fff',
+        backgroundColor: COLORS.primary,
         marginBottom: 10,
       }}>
       <View style={{width: '100%'}}>
@@ -31,6 +32,7 @@ const ProductItem = ({item, onAddToCart, onAddWishlist}) => {
             marginLeft: 10,
             fontSize: 18,
             fontWeight: '600',
+            color:'white',
           }}>
           {item.name}
         </Text>
@@ -48,22 +50,24 @@ const ProductItem = ({item, onAddToCart, onAddWishlist}) => {
               fontSize: 18,
               fontWeight: '600',
               marginBottom: 10,
+              color:'white',
             }}>
-            {'रु ' + item.price}
+            {'Rs: ' + item.price}
           </Text>
           <TouchableOpacity
             style={{
-              borderWidth: 0.5,
+              borderWidth: 3,
               padding: 5,
               justifyContent: 'center',
               alignItems: 'center',
               borderRadius: 10,
               marginRight: 15,
+              borderColor:COLORS.light,
             }}
             onPress={() => {
               onAddToCart(item);
             }}>
-            <Text style={{color: '#000'}}>Add to Cart</Text>
+            <Text style={{color:'white',}}>Add to Cart</Text>
           </TouchableOpacity>
         </View>
         <TouchableOpacity
@@ -71,7 +75,7 @@ const ProductItem = ({item, onAddToCart, onAddWishlist}) => {
             width: 40,
             elevation: 5,
             height: 40,
-            backgroundColor: '#fff',
+            backgroundColor: COLORS.light,
             borderRadius: 20,
             justifyContent: 'center',
             alignItems: 'center',

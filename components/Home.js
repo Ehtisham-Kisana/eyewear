@@ -14,22 +14,21 @@ const COLORS = {
   light: "#ECB365",
 };
 
-
 const Home = () => {
   const [selectedTab, setSelectedTab] = useState(0);
-  const [bg, setbg] = useState('');
+  const [bg, setbg] = useState("");
 
-  const colorPicker=()=>{
-    if(selectedTab===0){
-      setbg(COLORS.dark)
+  const colorPicker = () => {
+    if (selectedTab === 0) {
+      setbg(COLORS.dark);
+    } else if (selectedTab === 2) {
+      setbg(COLORS.dark);
     }
-    else if(selectedTab===2){
-      setbg(COLORS.dark)
-    }
-  }
+  };
   return (
+    
     //view1
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1,  }}>
       {selectedTab == 0 ? (
         <Main />
       ) : selectedTab == 1 ? (
@@ -49,7 +48,7 @@ const Home = () => {
           height: 70,
           position: "absolute",
           bottom: 0,
-          backgroundColor: COLORS.secondary,
+          backgroundColor:COLORS.dark,
           flexDirection: "row",
           alignItems: "center",
         }}
@@ -60,14 +59,13 @@ const Home = () => {
             height: "100%",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor:selectedTab==0? `#008080`: COLORS.secondary
+            backgroundColor: selectedTab == 0 ? `#008080` : COLORS.dark,
           }}
           onPress={() => {
             setSelectedTab(0);
           }}
         >
-
-          <Ionicons name="home-outline" size={32} color='white' />
+          <Ionicons name="home-outline" size={32} color="white" />
         </TouchableOpacity>
         <TouchableOpacity
           style={{
@@ -75,13 +73,13 @@ const Home = () => {
             height: "100%",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor:selectedTab==1? `#008080`: COLORS.secondary
+            backgroundColor: selectedTab == 1 ? `#008080` : COLORS.dark,
           }}
           onPress={() => {
             setSelectedTab(1);
           }}
         >
-          <Ionicons name="search-outline" size={32} color='white' />
+          <Ionicons name="search-outline" size={32} color="white" />
         </TouchableOpacity>
 
         {/* View3 */}
@@ -97,7 +95,7 @@ const Home = () => {
             style={{
               width: 60,
               height: 60,
-              backgroundColor: selectedTab==2? `#696969`: COLORS.dark,
+              backgroundColor: selectedTab == 2 ? COLORS.light : `#696969`,
               borderRadius: 30,
               justifyContent: "center",
               alignItems: "center",
@@ -106,7 +104,7 @@ const Home = () => {
               setSelectedTab(2);
             }}
           >
-            <Ionicons name="cart-outline" size={37} color='white'/>
+            <Ionicons name="cart-outline" size={37} color="white" />
           </TouchableOpacity>
         </View>
         <TouchableOpacity
@@ -115,13 +113,13 @@ const Home = () => {
             height: "100%",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor:selectedTab==3? `#008080`: COLORS.secondary
+            backgroundColor: selectedTab == 3 ? `#008080` : COLORS.dark,
           }}
           onPress={() => {
             setSelectedTab(3);
           }}
         >
-          <Ionicons name="heart-outline" size={32} color='white' />
+          <Ionicons name="heart-outline" size={32} color="white" />
         </TouchableOpacity>
         <TouchableOpacity
           style={{
@@ -129,13 +127,13 @@ const Home = () => {
             height: "100%",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor:selectedTab==4? `#008080`: COLORS.secondary
+            backgroundColor: selectedTab == 4 ? `#008080` : COLORS.dark,
           }}
           onPress={() => {
             setSelectedTab(4);
           }}
         >
-          <Ionicons name="person-outline" size={32} color='white' />
+          <Ionicons name="person-outline" size={32} color="white" />
         </TouchableOpacity>
       </View>
     </View>
@@ -144,5 +142,8 @@ const Home = () => {
 
 export default Home;
 
-const styles = StyleSheet.create({});
-
+const styles = StyleSheet.create({
+  container:{
+    backgroundColor:COLORS.dark,
+  }
+});

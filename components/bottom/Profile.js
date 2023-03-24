@@ -2,6 +2,8 @@ import {View, Text, TouchableOpacity, Image} from 'react-native';
 import React, {useEffect} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useNavigation} from '@react-navigation/native';
+import { COLORS } from '../common/COLORS';
+
 let name = '';
 const Profile = () => {
   const navigation = useNavigation();
@@ -20,6 +22,7 @@ const Profile = () => {
           justifyContent: 'space-between',
           flexDirection: 'row',
           alignItems: 'center',
+
         }}>
         <Text style={{fontWeight: '600', fontSize: 18, marginLeft: 15}}>
           Profile

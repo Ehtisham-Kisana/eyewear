@@ -10,6 +10,7 @@ import React, {useEffect, useState} from 'react';
 import Header from '../common/Header';
 import {products} from '../Products';
 import ProductItem from '../common/ProductItem';
+import { COLORS } from '../common/COLORS';
 //import {useDispatch, useSelector} from 'react-redux';
 import {addItemToCart, addToWishlist} from '../redux/actions/Actions';
 
@@ -42,7 +43,7 @@ const Main = () => {
   // console.log(items);
   return (
     <ScrollView style={{flex: 1, backgroundColor: '#fff', marginTop:25,}}>
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, backgroundColor:COLORS.secondary, }}>
         <Header />
         <Image
           source={require('../images/banner.jpeg')}
@@ -63,15 +64,19 @@ const Main = () => {
               return (
                 <TouchableOpacity
                   style={{
-                    height: 40,
+                    height: 45,
+                    width:85,
                     borderRadius: 20,
-                    borderWidth: 1,
+                    borderWidth: 2,
                     justifyContent: 'center',
                     alignItems: 'center',
                     marginLeft: 10,
+                    borderColor:COLORS.primary,
+                    backgroundColor:COLORS.light,
+
                   }}>
                   <Text
-                    style={{color: '#000', marginLeft: 10, marginRight: 10}}>
+                    style={{ marginLeft: 10, marginRight: 10, fontWeight:'bold', color:'black'}}>
                     {item}
                   </Text>
                 </TouchableOpacity>
@@ -85,9 +90,9 @@ const Main = () => {
             fontSize: 18,
             marginLeft: 20,
             fontWeight: '600',
-            color: '#000',
+            color: 'white',
           }}>
-          New T-Shirts
+          New T-Shirts:
         </Text>
         <View style={{marginTop: 15}}>
           <FlatList
@@ -115,9 +120,9 @@ const Main = () => {
             fontSize: 18,
             marginLeft: 20,
             fontWeight: '600',
-            color: '#000',
+            color: 'white',
           }}>
-          New Trousers
+          New Trousers:
         </Text>
         <View style={{marginTop: 15}}>
           <FlatList
@@ -145,9 +150,9 @@ const Main = () => {
             fontSize: 18,
             marginLeft: 20,
             fontWeight: '600',
-            color: '#000',
+            color: 'white',
           }}>
-          New Jeans
+          New Jeans:
         </Text>
         <View style={{marginTop: 15}}>
           <FlatList
@@ -175,9 +180,9 @@ const Main = () => {
             fontSize: 18,
             marginLeft: 20,
             fontWeight: '600',
-            color: '#000',
+            color: 'white',
           }}>
-          New Slippers
+          New Slippers:
         </Text>
         <View style={{marginTop: 15}}>
           <FlatList
@@ -205,9 +210,9 @@ const Main = () => {
             fontSize: 18,
             marginLeft: 20,
             fontWeight: '600',
-            color: '#000',
+            color: 'white',
           }}>
-          New Shoes
+          New Shoes:
         </Text>
         <View style={{marginTop: 15, marginBottom: 100}}>
           <FlatList

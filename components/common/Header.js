@@ -1,5 +1,6 @@
 import {View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
+import { COLORS } from './COLORS';
 
 const Header = () => {
   return (
@@ -12,13 +13,13 @@ const Header = () => {
         flexDirection: 'row',
         borderBottomWidth: 0.2,
         borderBottomColor: '#8e8e8e',
-        backgroundColor:'#fff'
+        backgroundColor:COLORS.dark,
       }}>
       <Text
         style={{
           fontWeight: '600',
           fontSize: 20,
-          color: '#000',
+          color: 'white',
           marginLeft: 20,
         }}>
         Glasses Store
@@ -31,8 +32,9 @@ const Header = () => {
           alignItems: 'center',
           width: 50,
           height: 30,
+          
         }}>
-        <Text>Mode</Text>
+        <Text style={{color: 'white',}}>Mode</Text>
       </TouchableOpacity>
     </View>
   );
