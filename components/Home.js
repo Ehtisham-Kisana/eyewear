@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import Main from "./Glasses/Main";
-import Search from "./Glasses/Search";
-import Cart from "./Glasses/Cart";
-import Wishlist from "./Glasses/Wishlist";
-import User from "./Glasses/User";
+import Main from "./bottom/Main";
+import Search from "./bottom//Search";
+import Cart from "./bottom/Cart";
+import Wishlist from "./bottom//Wishlist";
+import Profile from "./bottom/Profile";
 
 const COLORS = {
   dark: "#041C32",
@@ -39,7 +39,7 @@ const Home = () => {
       ) : selectedTab == 3 ? (
         <Wishlist />
       ) : (
-        <User />
+        <Profile />
       )}
 
       {/* view2 */}
