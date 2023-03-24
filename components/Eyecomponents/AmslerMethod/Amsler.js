@@ -23,9 +23,9 @@ const Amsler = () => {
       
       <TouchableOpacity
         onPress={() => handlePress("center")}
-        style={styles.centerButton}
+        style={[styles.centerButton, { bottom: 180 }]}
       >
-        <Text style={styles.buttonText}>Center</Text>
+        <Text style={[styles.buttonText,{textDecorationLine: 'underline', fontWeight:'bold', fontSize:20,}]}>Center</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => handlePress("upper-left")}
@@ -70,9 +70,8 @@ const styles = StyleSheet.create({
   },
   centerButton: {
     position: "absolute",
-    top: "42%",
-    left: "42%",
     backgroundColor: "transparent",
+    
   },
   cornerButton: {
     position: "absolute",
@@ -90,6 +89,7 @@ const styles = StyleSheet.create({
     color: "#000",
     textAlign: "center",
     marginTop: 25,
+    
   },
   resultText: {
     position: "absolute",
