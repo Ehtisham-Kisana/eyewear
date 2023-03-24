@@ -16,6 +16,7 @@ import SnellersInstruction from "./Eyecomponents/SnellersMethod/SnellersInstruct
 import ColorPlate from "./Eyecomponents/ColorPlateMethod/ColorPlate";
 import ColorPlateInstruction from "./Eyecomponents/ColorPlateMethod/ColorPlateInstruction";
 
+
 const Stack = createNativeStackNavigator();
 
 const Stackk = () => {
@@ -35,6 +36,8 @@ const Stackk = () => {
         <Stack.Screen name="Hoom" component={Hoom} />
         <Stack.Screen name="AR" component={AR} />
         <Stack.Screen name="Amsler" component={Amsler} />
+        
+        
         <Stack.Screen
           name="AmslerInstructions"
           component={AmslerInstructions}

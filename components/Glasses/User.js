@@ -3,7 +3,7 @@ import React from 'react'
 
 const User = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>User</Text>
     </View>
   )
@@ -11,4 +11,10 @@ const User = () => {
 
 export default User
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+})

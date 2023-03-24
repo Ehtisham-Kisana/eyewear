@@ -3,7 +3,7 @@ import React from 'react'
 
 const Cart = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Cart</Text>
     </View>
   )
@@ -11,4 +11,10 @@ const Cart = () => {
 
 export default Cart
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+})
