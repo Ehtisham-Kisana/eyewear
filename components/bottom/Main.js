@@ -39,6 +39,8 @@ const Main = () => {
     //console.log(JSON.stringify(products.category[0]));
   }, []);
 
+  
+  
   // const items = useSelector(state => state);
   // console.log(items);
   return (
