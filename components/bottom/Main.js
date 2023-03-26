@@ -80,7 +80,7 @@ const Main = () => {
                       marginLeft: 10,
                       marginRight: 10,
                       fontWeight: "bold",
-                      color: "white",
+                      color: "black",
                     }}
                   >
                     {item}
