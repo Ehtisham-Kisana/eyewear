@@ -25,8 +25,8 @@ const Search = () => {
         marginBottom: 5,
       }}
     >
-      <Text style={{ fontWeight: "600", fontSize: 18, marginLeft: 15 }}>
-        Cart
+      <Text style={{ fontWeight: "600", fontSize: 18, marginLeft: 15, color:'white', }}>
+        Search
       </Text>
     </View>
 

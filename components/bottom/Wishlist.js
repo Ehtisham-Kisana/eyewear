@@ -33,7 +33,7 @@ const Wishlist = () => {
           marginBottom: 5,
         }}
       >
-        <Text style={{ fontWeight: "600", fontSize: 18, marginLeft: 15 }}>
+        <Text style={{ fontWeight: "600", fontSize: 18, marginLeft: 15,color:'white', }}>
           Wishlist
         </Text>
       </View>

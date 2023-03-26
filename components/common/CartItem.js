@@ -56,7 +56,7 @@ const CartItem = ({
               fontWeight: '600',
               marginBottom: 10,
             }}>
-            {'रु ' + item.price}
+            {'Rs: ' + item.price}
           </Text>
           {isWishlist ? (
             <TouchableOpacity

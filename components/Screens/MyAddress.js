@@ -12,7 +12,7 @@ const MyAddress = () => {
   console.log(addressList);
   
   return (
-   <SafeAreaView style={{flex:1}}>
+   <SafeAreaView style={{flex:1, marginTop:25,}}>
      <View style={{flex: 1}}>
       <View
         style={{

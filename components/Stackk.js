@@ -15,6 +15,12 @@ import Snellers from "./Eyecomponents/SnellersMethod/Snellers";
 import SnellersInstruction from "./Eyecomponents/SnellersMethod/SnellersInstruction";
 import ColorPlate from "./Eyecomponents/ColorPlateMethod/ColorPlate";
 import ColorPlateInstruction from "./Eyecomponents/ColorPlateMethod/ColorPlateInstruction";
+import Splash from "./Screens/Splash";
+import MyAddress from './Screens/MyAddress';
+import AddAddress from './Screens/AddAddress';
+import Checkout from "./Screens/Checkout";
+import OrderSucess from "./OrderSucess";
+import Orders from "./Screens/Orders";
 
 
 const Stack = createNativeStackNavigator();
@@ -51,6 +57,32 @@ const Stackk = () => {
         <Stack.Screen
           name="ColorPlateInstruction"
           component={ColorPlateInstruction}
+        />
+        <Stack.Screen
+          
+          name="Splash"
+          component={Splash}
+        />
+        <Stack.Screen
+          
+          name="MyAddress"
+          component={MyAddress}
+        />
+        <Stack.Screen
+          name="AddAddress"
+          component={AddAddress}
+        />
+         <Stack.Screen
+          name="Checkout"
+          component={Checkout}
+        />
+        <Stack.Screen
+          name="OrderSuccess"
+          component={OrderSucess}
+        />
+        <Stack.Screen
+          name="Orders"
+          component={Orders}
         />
       </Stack.Navigator>
     </NavigationContainer>

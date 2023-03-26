@@ -13,7 +13,7 @@ const AddAddress = () => {
   const [pin, setPin] = useState('');
   const dispatch = useDispatch();
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, marginTop:25,}}>
       <View
         style={{
           width: '100%',
