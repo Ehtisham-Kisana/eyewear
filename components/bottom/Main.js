@@ -11,11 +11,11 @@ import Header from "../common/Header";
 import { products } from "../Products";
 import ProductItem from "../common/ProductItem";
 import { COLORS } from "../common/COLORS";
-//import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import { addItemToCart, addToWishlist } from "../redux/actions/Actions";
 
 const Main = () => {
-  //const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [categoryList, setCategoryList] = useState([]);
   const [tshirtList, setTshirtList] = useState([]);
   const [shoesList, setShoesLits] = useState([]);
@@ -110,12 +110,12 @@ const Main = () => {
               return (
                 <ProductItem
                   item={item}
-                  // onAddWishlist={x => {
-                  //   //dispatch(addToWishlist(x));
-                  // }}
-                  // onAddToCart={x => {
-                  //   //dispatch(addItemToCart(item));
-                  // }}
+                  onAddWishlist={x => {
+                    dispatch(addToWishlist(x));
+                  }}
+                  onAddToCart={x => {
+                    dispatch(addItemToCart(item));
+                  }}
                 />
               );
             }}
@@ -141,12 +141,12 @@ const Main = () => {
               return (
                 <ProductItem
                   item={item}
-                  // onAddWishlist={x => {
-                  //   //dispatch(addToWishlist(x));
-                  // }}
-                  // onAddToCart={x => {
-                  //   //dispatch(addItemToCart(item));
-                  // }}
+                   onAddWishlist={x => {
+                     dispatch(addToWishlist(x));
+                   }}
+                   onAddToCart={x => {
+                     dispatch(addItemToCart(item));
+                   }}
                 />
               );
             }}
@@ -172,12 +172,12 @@ const Main = () => {
               return (
                 <ProductItem
                   item={item}
-                  // onAddWishlist={x => {
-                  //   //dispatch(addToWishlist(x));
-                  // }}
-                  // onAddToCart={x => {
-                  //   //dispatch(addItemToCart(item));
-                  // }}
+                  onAddWishlist={x => {
+                    dispatch(addToWishlist(x));
+                  }}
+                  onAddToCart={x => {
+                    dispatch(addItemToCart(item));
+                  }}
                 />
               );
             }}
@@ -202,12 +202,12 @@ const Main = () => {
               return (
                 <ProductItem
                   item={item}
-                  // onAddWishlist={x => {
-                  //   //dispatch(addToWishlist(x));
-                  // }}
-                  // onAddToCart={x => {
-                  //   //dispatch(addItemToCart(item));
-                  // }}
+                  onAddWishlist={x => {
+                    dispatch(addToWishlist(x));
+                  }}
+                  onAddToCart={x => {
+                    dispatch(addItemToCart(item));
+                  }}
                 />
               );
             }}
@@ -233,12 +233,12 @@ const Main = () => {
               return (
                 <ProductItem
                   item={item}
-                  // onAddWishlist={x => {
-                  //   //dispatch(addToWishlist(x));
-                  // }}
-                  // onAddToCart={x => {
-                  //   //dispatch(addItemToCart(item));
-                  // }}
+                  onAddWishlist={x => {
+                    dispatch(addToWishlist(x));
+                  }}
+                  onAddToCart={x => {
+                    dispatch(addItemToCart(item));
+                  }}
                 />
               );
             }}
@@ -265,12 +265,12 @@ const Main = () => {
               return (
                 <ProductItem
                   item={item}
-                  // onAddWishlist={x => {
-                  //   dispatch(addToWishlist(x));
-                  // }}
-                  // onAddToCart={x => {
-                  //   dispatch(addItemToCart(x));
-                  // }}
+                  onAddWishlist={x => {
+                    dispatch(addToWishlist(x));
+                  }}
+                  onAddToCart={x => {
+                    dispatch(addItemToCart(x));
+                  }}
                 />
               );
             }}
