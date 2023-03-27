@@ -3,13 +3,37 @@ import React, {useEffect} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useNavigation} from '@react-navigation/native';
 import { COLORS } from '../common/COLORS';
+import {  useState } from "react";
+import { auth, db } from '../../firebase/firebase.config';
+import { signOut } from "firebase/auth"; 
+
 
 let name = '';
 const Profile = () => {
   const navigation = useNavigation();
   useEffect(() => {
     getData();
+    const Logout = () => {
+      signOut(auth)
+        .then(() => {
+          navigation.replace("Login");
+        })
+        .catch((error) => {
+          // An error happened.
+        });
+    };
   }, []);
+
+  const Logout = () => {
+    signOut(auth)
+      .then(() => {
+        navigation.replace("Login");
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
+
   const getData = async () => {
     name = await AsyncStorage.getItem('NAME');
   };
@@ -28,17 +52,23 @@ const Profile = () => {
           Profile
         </Text>
         <TouchableOpacity
-          style={{
-            width: 30,
-            height: 30,
-            marginRight: 20,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
+          onPress={() => {
+            Logout();
+          }}
+        >
           <Image
-            source={require('../images/settings.png')}
-            style={{width: 24, height: 24}}
+            source={{
+              uri: "https://cdn-icons-png.flaticon.com/512/126/126467.png",
+            }}
+            style={{
+              width: 30,
+              height: 30,
+              marginRight: 20,
+              marginTop:10,
+
+            }}
           />
+          <Text style={{ fontWeight: "bold" }}>Logout</Text>
         </TouchableOpacity>
       </View>
       <Image
