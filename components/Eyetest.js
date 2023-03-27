@@ -17,9 +17,22 @@ const COLORS = {
 const Eyetest = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <View style={styles.Upperbox}>
-        <Text style={styles.text}>Testing Methods</Text>
+            <View
+        style={{
+          width: "100%",
+          height: 70,
+          justifyContent: "space-between",
+          flexDirection: "row",
+          alignItems: "center",
+          backgroundColor: COLORS.dark,
+          marginBottom: 5,
+        }}
+      >
+        <Text style={{ fontWeight: "600", fontSize: 18, marginLeft: 15,color:'white', }}>
+          Testing Methods
+        </Text>
       </View>
+      
       <View style={styles.lowerbox}>
         <TouchableOpacity
           style={styles.box}
@@ -70,24 +83,11 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.secondary,
     alignItems: "center",
     justifyContent: "center",
+    marginTop: 25,
   },
-  Upperbox: {
-    flex: 1,
-    backgroundColor: COLORS.dark,
-    borderWidth: 3,
-    borderColor: "#708090",
-    margin: 10,
-    width: 350,
-    borderRadius: 15,
-    marginTop: 55,
-    alignItems: "center",
-    justifyContent: "center",
-  },
+
   lowerbox: {
     flex: 3,
-    backgroundColor: COLORS.dark,
-    borderWidth: 3,
-    borderColor: "#708090",
     margin: 10,
     width: 350,
     borderRadius: 15,
@@ -101,9 +101,9 @@ const styles = StyleSheet.create({
   },
   box: {
     flex: 1,
-    backgroundColor: COLORS.primary,
+    backgroundColor: COLORS.dark,
     borderWidth: 3,
-    borderColor: COLORS.secondary,
+    borderColor: "white",
     width: 280,
     margin: 17,
     padding: 30,
