@@ -145,44 +145,7 @@ const Checkout = () => {
           bgColor={COLORS.dark}
           textColor={'white'}
           title={'Place Order'}
-          // onPress={() => {
-          //   var options = {
-          //     description: 'Credits towards consultation',
-          //     image:
-          //       'https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/w_596,c_limit,q_auto:best,f_auto/fc/3034007-inline-i-applelogo.jpg',
-          //     currency: 'INR',
-          //     key: 'rzp_test_0hE4fShT1FxgWO', // Your api key
-          //     amount: '' + parseInt(getTotal() * 100) + '',
-          //     name: 'foo',
-          //     prefill: {
-          //       email: 'engineercodewalaa@razorpay.com',
-          //       contact: '1234567890',
-          //       name: 'Razorpay Software',
-          //     },
-          //     theme: {color: '#000'},
-          //   };
-          //   RazorpayCheckout.open(options)
-          //     .then(data => {
-          //       // handle success
-          //       alert(`Success: ${data.razorpay_payment_id}`);
-          //       dispatch(
-          //         addOrder({
-          //           items: cartData,
-          //           total: getTotal(),
-          //           address: selectedAddress,
-          //         }),
-          //       );
-          //       navigation.navigate('OrderSuccess', {
-          //         status: 'success',
-          //       });
-          //     })
-          //     .catch(error => {
-          //       // handle failure
-          //       navigation.navigate('OrderSuccess', {
-          //         status: 'failed',
-          //       });
-          //     });
-          // }}
+          
         />
       </View>
       </ScrollView>
