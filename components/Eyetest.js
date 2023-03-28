@@ -7,6 +7,7 @@ import {
   FlatList,
 } from "react-native";
 
+
 const COLORS = {
   dark: "#041C32",
   primary: "#04293A",
@@ -65,7 +66,7 @@ const Eyetest = ({ navigation }) => {
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.box}>
-          <Text style={styles.textBox}> Color Cube Test </Text>
+          <Text style={styles.textBox}> OKN Test </Text>
         </TouchableOpacity>
       </View>
       {/* 
