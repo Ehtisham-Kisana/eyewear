@@ -23,31 +23,31 @@ const Amsler = () => {
       
       <TouchableOpacity
         onPress={() => handlePress("center")}
-        style={[styles.centerButton, { bottom: 180 }]}
+        style={[styles.centerButton, { bottom: 160 }]}
       >
         <Text style={[styles.buttonText,{textDecorationLine: 'underline', fontWeight:'bold', fontSize:20,}]}>Center</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => handlePress("upper-left")}
-        style={[styles.cornerButton, { top: 120, left: 20 }]}
+        style={[styles.cornerButton, { top: 90, left: 20 }]}
       >
         <Text style={styles.buttonText}>Upper Left</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => handlePress("upper-right")}
-        style={[styles.cornerButton, { top: 120, right: 20 }]}
+        style={[styles.cornerButton, { top: 90, right: 20 }]}
       >
         <Text style={styles.buttonText}>Upper Right</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => handlePress("lower-left")}
-        style={[styles.cornerButton, { bottom: 120, left: 20 }]}
+        style={[styles.cornerButton, { bottom: 90, left: 20 }]}
       >
         <Text style={styles.buttonText}>Lower Left</Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => handlePress("lower-right")}
-        style={[styles.cornerButton, { bottom: 120, right: 20 }]}
+        style={[styles.cornerButton, { bottom: 90, right: 20 }]}
       >
         <Text style={styles.buttonText}>Lower Right</Text>
       </TouchableOpacity>

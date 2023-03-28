@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
   },
   container2: {
     flex: 1,
-    marginTop: 50,
   },
   Upperbox: {
     backgroundColor: COLORS.dark,

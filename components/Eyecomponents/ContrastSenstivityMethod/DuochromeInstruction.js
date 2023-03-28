@@ -14,32 +14,29 @@ const COLORS = {
   light: "#ECB365",
 };
 
-const ColorPlateInstruction = ({ navigation }) => {
+const DuochromeInstruction = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.container2}>
         <ScrollView>
           <View style={styles.Upperbox}>
-            <Text style={styles.text}>What is a Color Plate test?</Text>
+            <Text style={styles.text}>What is Duochrome?</Text>
             <Text style={styles.paragraph}>
-              The Color Plate test is a test to measure your ability to perceive
-              differences between colours. Color blindness is most often of
-              genetic nature, but may also occur because of eye, nerve, or brain
-              damage, or due to exposure to certain chemicals.
+            The Duochrome test is a simple color vision test that uses red-green or blue-yellow filters to assess the balance of the cones in the retina of the eye. 
+            It can help detect color vision deficiencies such as red-green color blindness.
             </Text>
           </View>
 
           <View style={styles.Upperbox}>
             <Text style={styles.text}>Instructions:</Text>
             <Text style={styles.paragraph}>
-              1. Place your phone approx. 30 cm/12 inches from your eyes with
-              each circle set at eye level. {"\n"}
-              {"\n"}2. Try to identify the hidden number in 5 seconds, however
-              there is no time limit. Then click the image to see the answer
-              with an analysis
+              1. Hold the mobile device at arm's length. {"\n"}
+              {"\n"}2. Cover one eye with the palm of your hand.
               {"\n"}
-              {"\n"}3. By clicking Next continue to the next test and complete
-              all the 15 tests to identify your color blindness severity.
+              {"\n"}3. Focus on the center of the screen and look for any color 
+              differences between the two halves of the image.
+              {"\n"}
+              {"\n"}4. Repeat the test with the other eye.
             </Text>
           </View>
 
@@ -49,7 +46,7 @@ const ColorPlateInstruction = ({ navigation }) => {
             <TouchableOpacity
               style={styles.btn}
               onPress={() => {
-                navigation.navigate("ColorPlate");
+                navigation.navigate("DuochromeTest");
               }}
             >
               <Text style={styles.text}>START</Text>
@@ -61,7 +58,7 @@ const ColorPlateInstruction = ({ navigation }) => {
   );
 };
 
-export default ColorPlateInstruction;
+export default DuochromeInstruction;
 
 const styles = StyleSheet.create({
   container: {
@@ -72,7 +69,7 @@ const styles = StyleSheet.create({
   },
   container2: {
     flex: 1,
-   
+
   },
   Upperbox: {
     backgroundColor: COLORS.dark,

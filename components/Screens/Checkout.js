@@ -31,33 +31,12 @@ const Checkout = () => {
     <SafeAreaView
       style={{
         flex: 1,
-        marginTop: 30,
         backgroundColor: COLORS.secondary,
         paddingBottom: 20,
       }}
     >
       <ScrollView>
-        <View
-          style={{
-            width: "100%",
-            height: 70,
-            justifyContent: "space-between",
-            flexDirection: "row",
-            alignItems: "center",
-            backgroundColor: COLORS.dark,
-          }}
-        >
-          <Text
-            style={{
-              fontWeight: "600",
-              fontSize: 18,
-              marginLeft: 15,
-              color: "white",
-            }}
-          >
-            Checkout
-          </Text>
-        </View>
+
         <View style={{ flex: 1 }}>
           <View>
             <FlatList

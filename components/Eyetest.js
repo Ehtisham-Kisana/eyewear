@@ -18,21 +18,6 @@ const COLORS = {
 const Eyetest = ({ navigation }) => {
   return (
     <View style={styles.container}>
-            <View
-        style={{
-          width: "100%",
-          height: 70,
-          justifyContent: "space-between",
-          flexDirection: "row",
-          alignItems: "center",
-          backgroundColor: COLORS.dark,
-          marginBottom: 5,
-        }}
-      >
-        <Text style={{ fontWeight: "600", fontSize: 18, marginLeft: 15,color:'white', }}>
-          Testing Methods
-        </Text>
-      </View>
       
       <View style={styles.lowerbox}>
         <TouchableOpacity
@@ -53,20 +38,21 @@ const Eyetest = ({ navigation }) => {
           <Text style={styles.textBox}> Snellers </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.box}>
-          <Text
-            style={styles.textBox}
+        <TouchableOpacity style={styles.box} 
             onPress={() => {
               navigation.navigate("ColorPlateInstruction");
-            }}
+            }}>
+          <Text style={styles.textBox}
           >
             {" "}
             Color Plate Test{" "}
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.box}>
-          <Text style={styles.textBox}> OKN Test </Text>
+        <TouchableOpacity style={styles.box} onPress={() => {
+              navigation.navigate("DuochromeInstruction");
+            }}>
+          <Text style={styles.textBox}> Duochrome Test </Text>
         </TouchableOpacity>
       </View>
       {/* 
@@ -84,7 +70,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.secondary,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 25,
+  
   },
 
   lowerbox: {

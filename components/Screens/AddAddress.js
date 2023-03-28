@@ -14,32 +14,7 @@ const AddAddress = () => {
   const dispatch = useDispatch();
   return (
     <View style={{flex: 1, marginTop:25,}}>
-      <View
-        style={{
-          width: '100%',
-          height: 70,
-          justifyContent: 'space-between',
-          flexDirection: 'row',
-          alignItems: 'center',
-        }}>
-        <TouchableOpacity
-          style={{
-            marginLeft: 20,
-            justifyContent: 'center',
-            alignItems: 'center',
-            borderWidth: 0.2,
-            padding: 7,
-            borderRadius: 10,
-          }}
-          onPress={() => {
-            navigation.goBack();
-          }}>
-          <Image
-            source={require('../images/back.png')}
-            style={{width: 24, height: 24}}
-          />
-        </TouchableOpacity>
-      </View>
+      
       <CustomTextInput
         placeholder={'Enter City Name'}
         value={city}
