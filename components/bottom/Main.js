@@ -75,6 +75,7 @@ const Main = () => {
                     backgroundColor: COLORS.light,
                   }}
                 >
+                
                   <Text
                     style={{
                       marginLeft: 10,
