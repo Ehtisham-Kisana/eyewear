@@ -76,6 +76,7 @@ const Main = () => {
                   }}
                 >
                 
+                
                   <Text
                     style={{
                       marginLeft: 10,
