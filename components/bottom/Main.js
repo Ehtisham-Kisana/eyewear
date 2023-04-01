@@ -163,6 +163,8 @@ const Main = () => {
             color: "white",
           }}
         >
+
+        
           Reading:
         </Text>
         <View style={{ marginTop: 15 }}>
