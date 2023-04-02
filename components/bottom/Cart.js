@@ -21,6 +21,8 @@ const Cart = () => {
        
       }}
     >
+
+      
       <View
         style={{
           width: "100%",
