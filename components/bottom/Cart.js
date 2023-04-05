@@ -12,6 +12,8 @@ const Cart = () => {
   const cartData = useSelector((state) => state.Reducers);
   const dispatch = useDispatch();
   const navigation = useNavigation();
+
+  
   return (
     <View
       style={{
