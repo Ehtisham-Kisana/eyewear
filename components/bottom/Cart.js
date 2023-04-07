@@ -6,6 +6,8 @@ import { addToWishlist, removeFromCart } from "../redux/actions/Actions";
 import CommonButton from "../common/CommonButton";
 import { COLORS } from "../common/COLORS";
 
+
+
 import { useNavigation } from "@react-navigation/native";
 const Cart = () => {
   const [cartList, setCartList] = useState([]);
