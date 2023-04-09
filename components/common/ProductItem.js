@@ -96,4 +96,5 @@ const ProductItem = ({item, onAddToCart, onAddWishlist}) => {
   );
 };
 
+
 export default ProductItem;
