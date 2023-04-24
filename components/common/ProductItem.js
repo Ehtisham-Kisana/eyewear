@@ -14,6 +14,8 @@ const ProductItem = ({item, onAddToCart, onAddWishlist}) => {
         marginLeft: 10,
         backgroundColor: COLORS.primary,
         marginBottom: 10,
+
+        
       }}>
       <View style={{width: '100%'}}>
         <Image
