@@ -44,6 +44,9 @@ const Hoom = ({ navigation }) => {
           imageStyle={{ borderRadius: 19, opacity: 0.9 }}
           style={styles.card}
         >
+
+
+          
           <View style={styles.cardContainer}>
             <Text style={styles.cardtext}> Store </Text>
           </View>
