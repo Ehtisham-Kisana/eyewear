@@ -47,9 +47,6 @@ const Hoom = ({ navigation }) => {
 
 
 
-
-
-
           
           <View style={styles.cardContainer}>
             <Text style={styles.cardtext}> Store </Text>
