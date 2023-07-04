@@ -115,8 +115,12 @@ const Profile = () => {
           borderBottomWidth: 0.3,
           borderBottomColor: '#8e8e8e',
           justifyContent: 'center',
-        }}>
-        <Text style={{}}>Offers</Text>
+        }}
+        onPress={() => {
+          navigation.navigate('DrHome');
+        }}
+        >
+        <Text style={{}}>EYE DOCTORS</Text>
       </TouchableOpacity>
     </View>
   );

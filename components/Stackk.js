@@ -23,6 +23,12 @@ import AddAddress from './Screens/AddAddress';
 import Checkout from "./Screens/Checkout";
 import OrderSucess from "./OrderSucess";
 import Orders from "./Screens/Orders";
+import DrHome from "./DoctorModule/screens/DrHome";
+import BookAppointment from "./DoctorModule/screens/BookAppointment";
+import Success from "./DoctorModule/screens/Success";
+import Pending from "./DoctorModule/screens/Pending";
+import Completed from "./DoctorModule/screens/Completed";
+import CallAmb from "./DoctorModule/screens/CallAmb";
 
 
 const Stack = createNativeStackNavigator();
@@ -230,6 +236,39 @@ const Stackk = () => {
             headerTitleAlign: 'center',
           }}
         />
+
+        {/* DoctorModule */}
+        <Stack.Screen
+          component={DrHome}
+          name="DrHome"
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          component={BookAppointment}
+          name="BookAppointment"
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          component={Success}
+          name="Success"
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          component={Pending}
+          name="Pending"
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          component={Completed}
+          name="Completed"
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          component={CallAmb}
+          name="CallAmb"
+          options={{headerShown: false}}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

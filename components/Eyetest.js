@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   FlatList,
+  Button
 } from "react-native";
 
 
@@ -55,9 +56,9 @@ const Eyetest = ({ navigation }) => {
           <Text style={styles.textBox}> Duochrome Test </Text>
         </TouchableOpacity>
       </View>
-      {/* 
-      <Button title="Go to Doctors page" onPress={()=>{navigation.navigate('Doctors')}} />
- */}
+      
+      <Button title="Go to Doctors page" onPress={()=>{navigation.navigate('DrHome')}} />
+
     </ View>
   );
 };

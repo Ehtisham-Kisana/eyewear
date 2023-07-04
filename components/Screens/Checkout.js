@@ -28,7 +28,7 @@ const Checkout = () => {
     return tempTotal;
   };
   return (
-    <SafeAreaView
+    <View
       style={{
         flex: 1,
         backgroundColor: COLORS.secondary,
@@ -166,7 +166,7 @@ const Checkout = () => {
           />
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
