@@ -1,0 +1,46 @@
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import React from 'react';
+
+const OdrSuccess = ({navigation}) => {
+  return (
+    <View style={styles.container}>
+      <Image source={require('../DoctorModule/images/checked.jpg')} style={styles.success} />
+      <Text style={styles.msg}>{'Your appointment successfully booked'}</Text>
+      <TouchableOpacity
+        style={styles.gotohome}
+        onPress={() => {
+          navigation.navigate('Hoom');
+        }}>
+        <Text>Go to Main Page</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+
+export default OdrSuccess;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  success: {
+    width: 100,
+    height: 100,
+  },
+  msg: {
+    fontSize: 16,
+    fontWeight: '700',
+    marginTop: 20,
+  },
+  gotohome: {
+    width: 150,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10,
+    borderWidth: 0.5,
+    marginTop: 30,
+  },
+});

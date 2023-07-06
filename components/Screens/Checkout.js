@@ -14,7 +14,7 @@ import CustomButton from "../common/CommonButton";
 //import {useNavigation} from '@react-navigation/native';
 import { COLORS } from "../common/COLORS";
 import { addOrder } from "../redux/actions/Actions";
-const Checkout = () => {
+const Checkout = ({navigation}) => {
   const cartData = useSelector((state) => state.Reducers);
   const addressList = useSelector((state) => state.AddressReducers);
   const [selectedAddress, setSelectedAddress] = useState("");
@@ -163,6 +163,9 @@ const Checkout = () => {
             bgColor={COLORS.dark}
             textColor={"white"}
             title={"Place Order"}
+            onPress={() => {
+              navigation.navigate('OdrSuccess')
+            }}
           />
         </View>
       </ScrollView>

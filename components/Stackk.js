@@ -29,6 +29,7 @@ import Success from "./DoctorModule/screens/Success";
 import Pending from "./DoctorModule/screens/Pending";
 import Completed from "./DoctorModule/screens/Completed";
 import CallAmb from "./DoctorModule/screens/CallAmb";
+import OdrSuccess from "./Screens/OdrSuccess";
 
 
 const Stack = createNativeStackNavigator();
@@ -47,19 +48,21 @@ const Stackk = () => {
         <Stack.Screen name="Home" component={Home}
          options={{headerShown: false}} />
         <Stack.Screen name="Eyetest" component={Eyetest} 
-        options={{
-          title: 'Testing Methods',
-          headerStyle: {
+        options={{headerShown: false}}
+        // options={{
+        //   title: 'Testing Methods',
+        //   headerStyle: {
         
-            backgroundColor: COLORS.dark,
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
+        //     backgroundColor: COLORS.dark,
+        //   },
+        //   headerTintColor: '#fff',
+        //   headerTitleStyle: {
+        //     fontWeight: 'bold',
             
-          },
-          headerTitleAlign: 'center',
-        }}
+        //   },
+        //   headerTitleAlign: 'center',
+          
+        // }}
         />
         <Stack.Screen name="Doctors" component={Doctors} />
         <Stack.Screen name="Hoom" component={Hoom} 
@@ -197,6 +200,10 @@ const Stackk = () => {
         <Stack.Screen
           name="OrderSuccess"
           component={OrderSucess}
+        />
+        <Stack.Screen
+          name="OdrSuccess"
+          component={OdrSuccess}
         />
         <Stack.Screen
           name="Orders"
