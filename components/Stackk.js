@@ -48,29 +48,9 @@ const Stackk = () => {
         <Stack.Screen name="Home" component={Home}
          options={{headerShown: false}} />
         <Stack.Screen name="Eyetest" component={Eyetest} 
-        options={{headerShown: false}}
-        // options={{
-        //   title: 'Testing Methods',
-        //   headerStyle: {
-        
-        //     backgroundColor: COLORS.dark,
-        //   },
-        //   headerTintColor: '#fff',
-        //   headerTitleStyle: {
-        //     fontWeight: 'bold',
-            
-        //   },
-        //   headerTitleAlign: 'center',
-          
-        // }}
-        />
-        <Stack.Screen name="Doctors" component={Doctors} />
-        <Stack.Screen name="Hoom" component={Hoom} 
-        options={{headerShown: false}} />
-        {/* <Stack.Screen name="AR" component={AR} /> */}
-        <Stack.Screen name="Amsler" component={Amsler} 
+        // options={{headerShown: false}}
         options={{
-          title: 'Amsler Test',
+          title: 'Testing Methods',
           headerStyle: {
         
             backgroundColor: COLORS.dark,
@@ -81,7 +61,29 @@ const Stackk = () => {
             
           },
           headerTitleAlign: 'center',
-        }} />
+          
+        }}
+        />
+        <Stack.Screen name="Doctors" component={Doctors} />
+        <Stack.Screen name="Hoom" component={Hoom} 
+        options={{headerShown: false}} />
+        {/* <Stack.Screen name="AR" component={AR} /> */}
+        <Stack.Screen name="Amsler" component={Amsler} 
+        options={{headerShown: false}}
+        // options={{
+        //   title: 'Amsler Test',
+        //   headerStyle: {
+        
+        //     backgroundColor: COLORS.dark,
+        //   },
+        //   headerTintColor: '#fff',
+        //   headerTitleStyle: {
+        //     fontWeight: 'bold',
+            
+        //   },
+        //   headerTitleAlign: 'center',
+        // }}
+         />
         
         
         <Stack.Screen
@@ -102,19 +104,20 @@ const Stackk = () => {
           }}
         />
         <Stack.Screen name="Snellers" component={Snellers}
-        options={{
-          title: 'Snellers Test',
-          headerStyle: {
+        options={{headerShown: false}}
+        // options={{
+        //   title: 'Snellers Test',
+        //   headerStyle: {
         
-            backgroundColor: COLORS.dark,
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
+        //     backgroundColor: COLORS.dark,
+        //   },
+        //   headerTintColor: '#fff',
+        //   headerTitleStyle: {
+        //     fontWeight: 'bold',
             
-          },
-          headerTitleAlign: 'center',
-        }}
+        //   },
+        //   headerTitleAlign: 'center',
+        // }}
         />
         <Stack.Screen
           name="SnellersInstruction"
@@ -133,20 +136,21 @@ const Stackk = () => {
             headerTitleAlign: 'center',
           }}
         />
-        <Stack.Screen name="ColorPlate" component={ColorPlate} 
-        options={{
-          title: 'Color Plate Test',
-          headerStyle: {
+        <Stack.Screen name="ColorPlate" component={ColorPlate}
+         options={{headerShown: false}} 
+        // options={{
+        //   title: 'Color Plate Test',
+        //   headerStyle: {
         
-            backgroundColor: COLORS.dark,
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
+        //     backgroundColor: COLORS.dark,
+        //   },
+        //   headerTintColor: '#fff',
+        //   headerTitleStyle: {
+        //     fontWeight: 'bold',
             
-          },
-          headerTitleAlign: 'center',
-        }}
+        //   },
+        //   headerTitleAlign: 'center',
+        // }}
         />
         <Stack.Screen
           name="ColorPlateInstruction"
@@ -229,19 +233,20 @@ const Stackk = () => {
         <Stack.Screen
           name="DuochromeTest"
           component={DuochromeTest}
-          options={{
-            title: 'Duochrome test',
-            headerStyle: {
+          options={{headerShown: false}}
+          // options={{
+          //   title: 'Duochrome test',
+          //   headerStyle: {
           
-              backgroundColor: COLORS.dark,
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-              fontWeight: 'bold',
+          //     backgroundColor: COLORS.dark,
+          //   },
+          //   headerTintColor: '#fff',
+          //   headerTitleStyle: {
+          //     fontWeight: 'bold',
               
-            },
-            headerTitleAlign: 'center',
-          }}
+          //   },
+          //   headerTitleAlign: 'center',
+          // }}
         />
 
         {/* DoctorModule */}

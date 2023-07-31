@@ -3,6 +3,7 @@ import {
   Text,
   View,
   SafeAreaView,
+  Image,
   TouchableOpacity,
 } from "react-native";
 import React from "react";
@@ -16,7 +17,7 @@ const COLORS = {
   light: "#ECB365",
 };
 
-const Snellers = (navigation) => {
+const Snellers = ({navigation}) => {
   const [size, setSize] = useState(75);
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0.0);
@@ -93,6 +94,24 @@ const Snellers = (navigation) => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+      <TouchableOpacity style={styles.backBtn} underlayColor="#ffffff00"  onPress={() => {
+        navigation.goBack();
+        }}>
+      
+        <Image source={require("../../DoctorModule/images/back.jpg")} style={styles.back} />
+      </TouchableOpacity>
+
+      <Text style={[styles.title, {marginLeft: 30}]}>Snellers</Text>
+      
+      <TouchableOpacity style={styles.leftBtn} underlayColor="#ffffff00"  
+      onPress={() => {
+          navigation.navigate('DrHome')
+        }}
+        >
+        <Image source={require("../../images/Drlogo.jpg")} style={styles.left} />
+      </TouchableOpacity>
+    </View>
       <SafeAreaView>
         <View style={styles.test}>
           <Text style={[styles.text, { fontSize: size }]}>{alpha[index]}</Text>
@@ -147,6 +166,59 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+
+  header: {
+    height: 100,
+    width: '100%',
+    flexDirection: 'row',
+    backgroundColor: COLORS.dark,
+    elevation: 5,
+    alignItems: 'center',
+    paddingTop: 30,
+    marginBottom:110, 
+  },
+  back: {
+    width: 24,
+    height: 24,
+  },
+
+  left:{
+    width: 40,
+    height: 40,
+    borderColor:'orange',
+    borderRadius:20,
+    borderWidth:2,
+
+
+  },
+  backBtn: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    backgroundColor:'white',
+    marginLeft:10,
+    marginTop:5,
+    alignItems:'center',
+  },
+  
+  leftBtn:{
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    top: 1,
+    left: 160,
+  },
+
+  title: {
+    fontSize: 18,
+    fontWeight: '600',
+    marginLeft:50,
+    color:'white',
+  },
+
+  
+
+
   test: {
     height: 320,
     width: 320,

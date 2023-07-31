@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { COLORS } from '../../common/COLORS';
 
-const DuochromeTest = () => {
+const DuochromeTest = ({navigation}) => {
     const [selectedOption, setSelectedOption] = useState(null);
 
   const handleOptionSelect = (option) => {
@@ -10,6 +10,26 @@ const DuochromeTest = () => {
   };
     return (
         <View style={styles.container}>
+          <View style={styles.header}>
+      <TouchableOpacity style={styles.backBtn} underlayColor="#ffffff00"  onPress={() => {
+        navigation.goBack();
+        }}>
+      
+        <Image source={require("../../DoctorModule/images/back.jpg")} style={styles.back} />
+      </TouchableOpacity>
+
+      <Text style={[styles.title, {marginLeft: 40}]}>Duochrome</Text>
+      
+      <TouchableOpacity style={styles.leftBtn} underlayColor="#ffffff00"  
+      onPress={() => {
+          navigation.navigate('DrHome')
+        }}
+        >
+        <Image source={require("../../images/Drlogo.jpg")} style={styles.left} />
+      </TouchableOpacity>
+    </View>
+
+    <View style={styles.container}>
         <View style={styles.imageContainer}>
           <Image
             source={{ uri: 'https://www.thomson-software-solutions.com/OnlineResources/Test%20Chart%202016/Help/lib/NewItem282.png' }}
@@ -36,6 +56,7 @@ const DuochromeTest = () => {
         <Text style={styles.resultText}>
           {selectedOption ? `You selected ${selectedOption}` : ''}
         </Text>
+        </View>
       </View>
     );
 };
@@ -45,18 +66,72 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 20,
         backgroundColor:COLORS.secondary,
       },
-      heading: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 20,
+
+      header: {
+    
+        height: 100,
+        width: '100%',
+        flexDirection: 'row',
+        backgroundColor: COLORS.dark,
+        elevation: 5,
+        alignItems: 'center',
+        paddingTop: 30,
+      
+      },
+      back: {
+        width: 24,
+        height: 24,
+      },
+    
+      left:{
+        width: 40,
+        height: 40,
+        borderColor:'orange',
+        borderRadius:20,
+        borderWidth:2,
+    
+    
+      },
+      backBtn: {
+        width: 30,
+        height: 30,
+        borderRadius: 15,
+        backgroundColor:'white',
+        marginLeft:10,
+        marginTop:5,
+        alignItems:'center',
+      },
+      
+      leftBtn:{
+        width: 30,
+        height: 30,
+        borderRadius: 15,
+        top: 1,
+        left: 130,
+      },
+    
+      title: {
+        fontSize: 18,
+        fontWeight: '600',
+        marginLeft:50,
         color:'white',
       },
+    
+       // heading: {
+      //   fontSize: 24,
+      //   fontWeight: 'bold',
+      //   marginBottom: 20,
+      //   color:'white',
+    
+      // },
+
+
       imageContainer: {
         alignItems: 'center',
         marginBottom: 20,
+        marginTop:20,
       },
       image: {
         width: 350,

@@ -21,24 +21,6 @@ const Eyetest = ({ navigation }) => {
   return (
 
     <View style={styles.container}>
-    <View style={styles.header}>
-      <TouchableOpacity style={styles.backBtn} underlayColor="#ffffff00"  onPress={() => {
-        navigation.goBack();
-        }}>
-      
-        <Image source={require("../components/DoctorModule/images/back.jpg")} style={styles.back} />
-      </TouchableOpacity>
-
-      <Text style={[styles.title, {marginLeft: 30}]}>Testing Methods</Text>
-      
-      <TouchableOpacity style={styles.leftBtn} underlayColor="#ffffff00"  
-      onPress={() => {
-          navigation.navigate('DrHome')
-        }}
-        >
-        <Image source={require("../components/images/Drlogo.jpg")} style={styles.left} />
-      </TouchableOpacity>
-    </View>  
     
       <View style={styles.lowerbox}>
         <TouchableOpacity
@@ -77,7 +59,7 @@ const Eyetest = ({ navigation }) => {
         </TouchableOpacity>
       </View>
       
-      <Button title="Go to Doctors page" onPress={()=>{navigation.navigate('DrHome')}} />
+      {/* <Button title="Go to Doctors page" onPress={()=>{navigation.navigate('DrHome')}} /> */}
       
     </ View>
   );
@@ -174,3 +156,23 @@ const styles = StyleSheet.create({
     fontSize: 23,
   },
 });
+
+{/* <View style={styles.header}>
+      <TouchableOpacity style={styles.backBtn} underlayColor="#ffffff00"  onPress={() => {
+        navigation.goBack();
+        }}>
+      
+        <Image source={require("../components/DoctorModule/images/back.jpg")} style={styles.back} />
+      </TouchableOpacity>
+
+      <Text style={[styles.title, {marginLeft: 30}]}>Testing Methods</Text>
+      
+      <TouchableOpacity style={styles.leftBtn} underlayColor="#ffffff00"  
+      onPress={() => {
+          navigation.navigate('DrHome')
+        }}
+        >
+        <Image source={require("../components/images/Drlogo.jpg")} style={styles.left} />
+      </TouchableOpacity>
+    </View>  
+     */}

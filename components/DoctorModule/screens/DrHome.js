@@ -13,9 +13,27 @@ import Header from "../components/Header";
 const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
+            <View style={styles.header}>
+      <TouchableOpacity style={styles.backBtn} underlayColor="#ffffff00"  >
+      
+        <Image source={require("../../DoctorModule/images/logo.jpg")} style={styles.back} />
+      </TouchableOpacity>
+
+      <Text style={[styles.title, {marginLeft: 30}]}>Doctors</Text>
+      
+      <TouchableOpacity style={styles.leftBtn} underlayColor="#ffffff00"  
+      onPress={() => {
+          navigation.navigate('Hoom')
+        }}
+        >
+        <Image source={require("../../DoctorModule/images/home.jpg")} style={styles.left} />
+      </TouchableOpacity>
+    </View>
+
+
       <ScrollView style={styles.container}>
         <View style={styles.container}>
-          <Header title={"Find Doctors"} icon={require("../images/logo.jpg")} />
+          {/* <Header title={"Find Doctors"} icon={require("../images/logo.jpg")} /> */}
           <Image
             source={require("../images/banner.jpg")}
             style={styles.banner}
@@ -147,6 +165,56 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
   },
+  header: {
+    height: 100,
+    width: '100%',
+    flexDirection: 'row',
+    // backgroundColor: COLORS.dark,
+    elevation: 5,
+    alignItems: 'center',
+    paddingTop: 30,
+  
+  },
+  back: {
+    width: 24,
+    height: 24,
+  },
+
+  left:{
+    width: 40,
+    height: 40,
+    borderColor:'orange',
+    borderRadius:20,
+    borderWidth:2,
+
+
+  },
+  backBtn: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    backgroundColor:'white',
+    marginLeft:10,
+    marginTop:5,
+    alignItems:'center',
+  },
+  
+  leftBtn:{
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    top: 1,
+    left: 160,
+  },
+
+  title: {
+    fontSize: 18,
+    fontWeight: '600',
+    marginLeft:50,
+    color:'black',
+  },
+
+  
   banner: {
     width: "100%",
     height: 200,

@@ -69,7 +69,7 @@ const images = [
 
 
 
-const ColorPlate = () => {
+const ColorPlate = ({navigation}) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [result, setresult] = useState(false);
   const ShowResult = () => {
@@ -87,6 +87,27 @@ const ColorPlate = () => {
   return (
     
     <View style={styles.container}>
+      <View style={styles.header}>
+      <TouchableOpacity style={styles.backBtn} underlayColor="#ffffff00"  onPress={() => {
+        navigation.goBack();
+        }}>
+      
+        <Image source={require("../../DoctorModule/images/back.jpg")} style={styles.back} />
+      </TouchableOpacity>
+
+      <Text style={[styles.title, {marginLeft: 40}]}>Color Plate</Text>
+      
+      <TouchableOpacity style={styles.leftBtn} underlayColor="#ffffff00"  
+      onPress={() => {
+          navigation.navigate('DrHome')
+        }}
+        >
+        <Image source={require("../../images/Drlogo.jpg")} style={styles.left} />
+      </TouchableOpacity>
+    </View>
+
+       <View style={styles.container}>
+      
     
       <Image style={styles.test} source={images[currentImage].uri} />
 
@@ -121,6 +142,7 @@ const ColorPlate = () => {
         
       </View>
     </View>
+    </View>
     
   );
 };
@@ -131,19 +153,78 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.secondary,
     alignItems: "center",
     justifyContent: "center",
+    
   },
+
+  header: {
+    
+    height: 100,
+    width: '100%',
+    flexDirection: 'row',
+    backgroundColor: COLORS.dark,
+    elevation: 5,
+    alignItems: 'center',
+    paddingTop: 30,
+  
+  },
+  back: {
+    width: 24,
+    height: 24,
+  },
+
+  left:{
+    width: 40,
+    height: 40,
+    borderColor:'orange',
+    borderRadius:20,
+    borderWidth:2,
+
+
+  },
+  backBtn: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    backgroundColor:'white',
+    marginLeft:10,
+    marginTop:5,
+    alignItems:'center',
+  },
+  
+  leftBtn:{
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    top: 1,
+    left: 130,
+  },
+
+  title: {
+    fontSize: 18,
+    fontWeight: '600',
+    marginLeft:50,
+    color:'white',
+  },
+
+  
+
+
+
   test: {
     height: 340,
     width: 340,
     backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
+    // marginTop:190,
   },
 
   container2: {
+ 
     flexDirection: "row",
     justifyContent: "space-between",
     margin: 10,
+    
   },
   btn: {
     height: 40,
